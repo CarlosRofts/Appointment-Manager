@@ -1,0 +1,169 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+html {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2a3a4d; 
+  min-height: 100%;
+  padding-bottom: 5rem;
+  font-family: 'Lato' , regular;
+
+  .rounded-pill{
+    border-radius: 40px;
+    background-color: rgba(0, 255, 255, 0.658);
+    transform: translate(300px);
+    animation: enter .4s cubic-bezier(.54,.95,.66,1.39) .3s forwards;
+    @keyframes enter { to{transform: translate(0px); } }
+  }
+  .social{
+    border-radius: 50%;
+    font-size: 3em;
+    &:hover{
+      // font-size: 3.7rem;
+      border: 2.5px solid white;
+      transition: all .2s linear;
+  }}
+
+ 
+}
+h1 , h2  {
+  color: rgba(208, 222, 230, 0.678);
+  padding: 3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+/*──── FORM  ────────────────────────────────────────────────────────────────────────────────── */
+.form-wrapper h2{
+  color: rgba(52, 54, 56, 0.678);
+}
+
+.form-wrapper{ /* form */
+  background-color: rgb(245, 252, 255);
+  border-radius: .5rem;
+  padding:0px 20px;
+  max-height: 800px;
+  
+}
+
+.alerta-error {
+  background-color: white;
+  color: red;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  /* font-family:  'Staatliches', cursive; */
+} 
+
+
+label {
+  color: white;
+}
+
+
+/* ──── List Cards  ────────────────────────────────────────────────────────────────────────────────── */
+
+.cita {
+  cursor: pointer;
+  padding: 2rem;
+  background-color: rgb(245, 252, 255);
+  border-bottom: 1px solid #e1e1e1;
+  color: rgba(0, 0, 0, 0.637);
+
+  
+  height: calc(10rem + 5vw);
+  overflow: hidden;
+
+  transition: transform .2s .1s ease-out, 
+                height .3s,
+                margin .3s;
+}
+
+.cita h4 {
+  font-weight: bold;
+  margin-bottom: .8rem;
+}
+.cita h5 {
+  margin-bottom: .8rem;  
+}
+
+.cita .sintomas{
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.cita p{
+  color: rgba(0, 0, 0, 0); 
+  transition: color .2s ease-out; /* # coment here //al cerrar*/
+}
+
+.cita:first-of-type {
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+}
+.cita:last-of-type {
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+
+
+
+/*──── TRANSITIONS CARD-LIST  ────────────────────────────────────────────────────────────────────────────────── */
+
+
+.expand{
+  transform:perspective(1px);
+  transform: scale(1.05);
+  transform-origin: center;
+    
+  height: calc(20rem + 5vw);
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+
+.card-wrapper:hover{
+  background-color:rgb(255, 255, 255);
+}
+
+.expand p{
+  color: rgba(0, 0, 0, 0.651);
+  transition: color .2s .3s  linear; /* # coment here al abrir */
+}
+
+/*──── ANIMATIONS TANSITION-GROUP-LIB  ────────────────────────────────────────────────────────────────────────────────── */
+
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
+
+
+
+/* ──── CUSTOM STYLES BOOSTRAP-DESIGN-MATERIAL  ──────────────────────────────────────────────────── */
+
+.form-control {
+  background-image: linear-gradient(0deg,#43dde6 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0);
+}
